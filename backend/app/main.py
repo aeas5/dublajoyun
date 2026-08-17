@@ -7,8 +7,8 @@ from fastapi import (
 )
 
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import Response
-from fastapi.responses import FileResponse
+from fastapi.responses import Response, FileResponse
+
 import tempfile
 import os
 import subprocess
@@ -25,14 +25,16 @@ app = FastAPI(
 # CORS
 # =========================================================
 
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://dublajoyun.netlify.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        'https://dublaj-worker.araslateknoloji.workers.dev'
-    ],
-    allow_credentials=True,
+    allow_origins=ALLOWED_ORIGINS,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
