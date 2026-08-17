@@ -11,7 +11,7 @@ const API_URL =
   "https://dublaj-worker.araslateknoloji.workers.dev";
 
 const BACKEND_URL =
-  "https://dublajoyun.netlify.app";
+  "https://dublaj-api.onrender.com";
 
 const CANVAS_WIDTH = 1200;
 const CANVAS_HEIGHT = 180;
