@@ -1,0 +1,238 @@
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+.upload-form {
+  margin-top: 25px;
+  padding-top: 25px;
+
+  border-top: 1px solid
+    #292929;
+}
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 50px auto;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0 0 40px;
+}
+
+.audio-section {
+  background: #181818;
+  border: 1px solid #2c2c2c;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.section-header span {
+  color: #888;
+  font-family: monospace;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+.video-item {
+  display: grid;
+  grid-template-columns:
+    280px 1fr auto;
+
+  gap: 20px;
+
+  align-items: center;
+
+  padding: 20px 0;
+
+  border-bottom:
+    1px solid #2c2c2c;
+}
+
+.video-preview {
+  width: 280px;
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #000;
+}
+
+.video-preview video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.video-info h3 {
+  margin: 0 0 8px;
+}
+
+.video-info p {
+  color: #999;
+  margin: 0 0 8px;
+}
+
+.video-info small {
+  color: #666;
+}
+
+.delete-button {
+  background: #ff453a;
+  color: white;
+}
+.waveform-overlay {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #0c0c0c;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    50px 35px,
+    50px 35px;
+}
+
+.waveform-overlay canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 280px;
+}
+
+.waveform-overlay canvas:last-child {
+  opacity: 0.45;
+}
+
+.waveform-overlay canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 180px;
+}
+
+.waveform-overlay canvas:first-child {
+  z-index: 1;
+}
+
+.waveform-overlay canvas:last-child {
+  z-index: 2;
+  opacity: 0.45;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 180px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 13px 22px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #eee;
+  color: #111;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+button.stop {
+  background: #ff453a;
+  color: white;
+}
+
+button.compare {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+}
+
+.ready {
+  color: #5ee65e;
+  margin-top: 20px;
+}
+
+.error {
+  color: #ff453a;
+  margin-top: 20px;
+}
+
+.result {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.result h2 {
+  color: #aaa;
+}
+
+.score {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 15px 0;
+}
+
+.result > span {
+  color: #888;
+  font-size: 20px;
+}

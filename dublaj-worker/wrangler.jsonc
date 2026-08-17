@@ -1,0 +1,20 @@
+{
+  "name": "dublaj-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-16",
+
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "dublaj-media"
+    }
+  ],
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dublaj-db",
+      "database_id": "59e01cc9-a016-48b1-ac32-98e8a07d0864"
+    }
+  ]
+}

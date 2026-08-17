@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #101010;
+  color: #eee;
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 30px;
+
+  background: rgba(
+    16,
+    16,
+    16,
+    0.92
+  );
+
+  backdrop-filter: blur(
+    14px
+  );
+
+  border-bottom: 1px solid
+    #292929;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eee;
+  color: #111;
+
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.app-brand h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.app-brand span {
+  display: block;
+  margin-top: 2px;
+
+  color: #777;
+  font-size: 11px;
+}
+
+/* =========================================================
+   ADMIN BUTTON
+   ========================================================= */
+
+.admin-toggle {
+  padding: 9px 15px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  background: #181818;
+  color: #ddd;
+
+  cursor: pointer;
+}
+
+.admin-toggle:hover {
+  background: #222;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.app-main {
+  width: 100%;
+}
+
+/* =========================================================
+   ADMIN OVERLAY
+   ========================================================= */
+
+.admin-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.72
+  );
+
+  backdrop-filter: blur(
+    10px
+  );
+}
+
+.admin-panel-wrapper {
+  width: min(
+    1200px,
+    100%
+  );
+
+  margin: 0 auto;
+
+  background: #111;
+
+  border: 1px solid #333;
+  border-radius: 16px;
+
+  box-shadow:
+    0 30px 100px
+      rgba(0, 0, 0, 0.5);
+}
+
+.admin-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 25px;
+
+  border-bottom: 1px solid
+    #292929;
+}
+
+.admin-panel-header span {
+  color: #777;
+
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.admin-panel-header h2 {
+  margin: 5px 0 0;
+
+  font-size: 22px;
+}
+
+.admin-panel-header button {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  background: #181818;
+  color: #ddd;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 700px
+) {
+  .app-header {
+    padding: 12px 15px;
+  }
+
+  .admin-overlay {
+    padding: 10px;
+  }
+
+  .admin-panel-wrapper {
+    border-radius: 12px;
+  }
+}
